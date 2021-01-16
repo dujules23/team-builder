@@ -1,8 +1,11 @@
 
 import './App.css';
-//imported useState hook
 
+//imported useState hook
 import React,  { useState } from 'react'
+
+//imported form.js
+import Form from './Form'
 
 
 const initialFormValues = {
@@ -20,7 +23,10 @@ function App() {
   const [members, setMembers] = useState([]);
 
   // console.log(members)
-  
+
+//State for Form values
+
+  const [formValues, setFormMembers] = useState(initialFormValues)
 
 
   
@@ -31,7 +37,12 @@ function App() {
     <div className="container">
       <h1>Form App</h1>
       <h3>Current Team</h3>
+      <Form
+        values={formValues}
+        update
+        submit
 
+      />
     </div>
   );
 }
