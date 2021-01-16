@@ -13,23 +13,11 @@ const initialFormValues = {
   role: ''
 }
 
-const initialMembers = [
-  {
-    username: 'Durrell',
-    email: 'asldkfjdsl@fmail.com',
-    role: 'Junior Developer',
-  },
-  {
-    username: 'John',
-    email: 'shenlapeksm@fmail.com',
-    role: 'Junior Developer',
-  },
-  
-]
+
 
 function App() {
 //State for team members to be stored
-  const [members, setMembers] = useState(initialMembers);
+  const [members, setMembers] = useState([]);
 
   // console.log(members)
   
@@ -43,7 +31,7 @@ function App() {
     <div className="container">
       <h1>Form App</h1>
       <h3>Current Team</h3>
-      
+
     </div>
   );
 }
