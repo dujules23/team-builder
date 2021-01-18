@@ -29,9 +29,10 @@ export default function Form (props) {
 
 
 return (
-    <form>
+    <form className='form-container' onSubmit={onSubmit}>
         <div>
-            <label>Username
+            
+            <label>Username 
                 <input
                     name='username'
                     type='text'
@@ -40,7 +41,8 @@ return (
                     value={values.username}
                     onChange={onChange}/>
             </label>
-            <label>Email
+            <br/>
+            <label>Email 
                 <input
                     name='email'
                     type='text'
@@ -49,7 +51,8 @@ return (
                     value={values.email}
                     onChange={onChange}/>
             </label>
-            <label>Role
+            <br/>
+            <label>Role 
                 <select value={values.role} name='role' onChange={onChange}>
                     <option value=''>---Select a Role---</option>
                     <option value='Backend Engineer'>Backend Engineer</option>
@@ -59,6 +62,9 @@ return (
             </label>
 
 
+        <div>
+            <button disabled={!values.username || !values.email || !values.role}>submit</button>
+        </div>
         </div>
     </form>
 

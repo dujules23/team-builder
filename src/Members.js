@@ -1,16 +1,24 @@
+import React from 'react'
 
 
-const initialMembers = [
-    {
-      username: 'Durrell',
-      email: 'asldkfjdsl@fmail.com',
-      role: 'Junior Developer',
-    },
-    {
-      username: 'John',
-      email: 'shenlapeksm@fmail.com',
-      role: 'Junior Developer',
-    },
-    
-  ]
   
+export default function Members (props) {
+
+  const { details } = props 
+    
+    
+
+  if (!details) {
+    return <h3>Working fetching your friend&apos;s details...</h3>
+  }
+
+  return (
+    <div className='member container'>
+      <h2>{details.username}</h2>
+      <p>Email: {details.email}</p>
+      <p>Role: {details.role}</p>
+    </div>
+  )
+}
+
+// Members();
